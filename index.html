@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GVT-EA2---2D-Geometrie-aus-Linien---Fabian-Meintzer">
+  <title>Graphical Visualisation Technologies - EA2: 
+    <br>
+    2D Geometrie aus Linien</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+
+
+    <header class="masthead">
+      <h1>Graphical Visualisation Technologies - EA2: <br>  2D Geometrie aus Linien</h1>
+
+    <figure class="stage">
+      <canvas id="glcanvas" role="img"
+              aria-label="Linienzeichnung einer stilisierten Robbe, gerendert mit WebGL. Die Zeichnung besteht aus mehreren hundert 2D-Vertices in den Zeichenmodi LINE_LOOP, LINE_STRIP und LINES.">
+      </canvas>
+
+      <noscript>
+        <p class="notice">Für die Darstellung wird JavaScript mit WebGL-Unterstützung benötigt.</p>
+      </noscript>
+
+      <div id="webgl-error" class="notice" hidden></div>
+
+      <figcaption class="stage-caption">
+        <span class="caption-title">Robbe im Wasser</span>
+        <span class="caption-sub">2D-Line-Art, erstellt in WebGL, viel Ausprobiererei, teilweise unterstützt mit ChatGPT </span>
+      </figcaption>
+    </figure>
+
+
+    <section class="stats" aria-label="Technische Eckdaten der Darstellung">
+      <div class="stat">
+        <span class="stat-value" id="stat-vertices">–</span>
+        <span class="stat-label">Vertices im Buffer</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-parts">–</span>
+        <span class="stat-label">Geometriebestandteile</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-draws">–</span>
+        <span class="stat-label">drawArrays()-Aufrufe</span>
+      </div>
+      <div class="stat stat-modes">
+        <span class="stat-value" id="stat-modes">–</span>
+        <span class="stat-label">Zeichenmodi</span>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <p>Erstellt von Fabian Meintzer in Brandenburg an der Havel</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
